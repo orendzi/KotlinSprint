@@ -7,10 +7,9 @@ fun main () {
     val numB = Random.nextInt(0, 42)
 
     println("Hello, enter the first number in range of 0 - 42, please:")
-    val userNumA = readln().toIntOrNull()
+    val userNumA = readln().toIntOrNull() ?: return
     println("Enter the second number in the same range, please:")
-    val userNumB = readln().toIntOrNull()
-    if (userNumA == null ||userNumB == null) return
+    val userNumB = readln().toIntOrNull() ?: return
 
     if((userNumA == numA || userNumA == numB) && (userNumB == numA || userNumB == numB)) {
         println("Congratulations!\nYou've guessed both numbers: $numA, $numB.\nYou get the main prize!")
