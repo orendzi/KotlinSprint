@@ -1,12 +1,16 @@
 package lsn4
 
 // Lesson 4, task 3
+const val SUNNY_WEATHER = true
+const val OPEN_TENT = true
+const val LOW_HUMIDITY = 20
+const val IMPROPER_SEASON = "зима"
 fun main() {
-    val isSunny_weather = true
-    val isOpen_tent = true
+    val isSunnyWeather = true
+    val isOpenTent = true
     val humidity = 20
     val currentSeason = "зима"
 
     println("Благоприятные ли условия сейчас для роста бобовых? " +
-            "${isSunny_weather && isOpen_tent && humidity == 20 && currentSeason != "зима"}")
+            "${isSunnyWeather == SUNNY_WEATHER && isOpenTent == OPEN_TENT && humidity == LOW_HUMIDITY && currentSeason != IMPROPER_SEASON}")
 }
